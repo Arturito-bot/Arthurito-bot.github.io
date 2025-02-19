@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Google Sans', Arial, sans-serif;
+    background-color: #f8f9fa;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,68 +14,115 @@ body {
 
 .login-box {
     background-color: #fff;
-    padding: 20px;
+    padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 90%;
 }
 
 .logo {
     width: 100%;
-    max-width: 200px;
+    max-width: 100px;
     margin-bottom: 20px;
 }
 
 h2 {
-    margin-bottom: 20px;
-    color: #333;
+    margin-bottom: 10px;
+    color: #202124;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+p {
+    color: #5f6368;
+    margin-bottom: 30px;
+    font-size: 16px;
 }
 
 .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-align: left;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
 }
 
 input[type="email"],
 input[type="password"] {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 12px;
+    border: 1px solid #dadce0;
     border-radius: 4px;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4285f4;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
     font-size: 16px;
-    cursor: pointer;
+    outline: none;
 }
 
-button:hover {
-    background-color: #357ae8;
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #1a73e8;
+    box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.2);
+}
+
+.forgot-email {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.forgot-email a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-email a:hover {
+    text-decoration: underline;
 }
 
 .footer-links {
     margin-top: 20px;
+    text-align: left;
 }
 
 .footer-links a {
-    color: #4285f4;
+    color: #1a73e8;
     text-decoration: none;
-    margin: 0 5px;
+    font-size: 14px;
 }
 
 .footer-links a:hover {
     text-decoration: underline;
 }
 
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.primary-button {
+    background-color: #1a73e8;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    padding: 10px 24px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.primary-button:hover {
+    background-color: #1557b5;
+}
+
+.secondary-button {
+    background-color: transparent;
+    border: none;
+    color: #1a73e8;
+    padding: 10px 24px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.secondary-button:hover {
+    color: #1557b5;
+}
