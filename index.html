@@ -7,7 +7,7 @@
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
-            emailjs.init("votre_clé_publique"); // Remplacez par votre clé API publique
+            emailjs.init(tb99fk1Tb2HNr_UQw); // Remplacez par votre clé API publique
         })();
     </script>
 </head>
@@ -18,7 +18,7 @@
     <script>
         document.getElementById('send-email-btn').addEventListener('click', function() {
             // Envoyer un email avec un message fixe
-            emailjs.send("votre_serviceID", "votre_templateID", {
+            emailjs.send(service_u6vikzg, template_0x8is9j, {
                 message: "Ceci est un test d'envoi d'email."
             }).then(function(response) {
                 console.log('Email envoyé!', response.status, response.text);
