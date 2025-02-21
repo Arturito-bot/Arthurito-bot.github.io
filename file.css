@@ -7,6 +7,12 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #fff;
 }
 
 .container {
@@ -19,6 +25,12 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 350px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .login-box {
+    background-color: #2e2e2e;
+    color: #fff;
 }
 
 .logo img {
@@ -30,11 +42,21 @@ body {
 h2 {
     margin-bottom: 10px;
     color: #202124;
+    transition: color 0.3s;
+}
+
+body.dark-mode h2 {
+    color: #fff;
 }
 
 p {
     margin-bottom: 20px;
     color: #5f6368;
+    transition: color 0.3s;
+}
+
+body.dark-mode p {
+    color: #fff;
 }
 
 .input-group {
@@ -46,6 +68,11 @@ label {
     display: block;
     margin-bottom: 5px;
     color: #202124;
+    transition: color 0.3s;
+}
+
+body.dark-mode label {
+    color: #fff;
 }
 
 input[type="email"],
@@ -56,6 +83,14 @@ input[type="password"] {
     border-radius: 4px;
     background-color: #f1f3f4;
     color: #202124;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+body.dark-mode input[type="email"],
+body.dark-mode input[type="password"] {
+    background-color: #2e2e2e;
+    color: #fff;
+    border-color: #5f6368;
 }
 
 .forgot-email,
@@ -77,6 +112,11 @@ input[type="password"] {
 
 .incognito-mode p {
     color: #5f6368;
+    transition: color 0.3s;
+}
+
+body.dark-mode .incognito-mode p {
+    color: #fff;
 }
 
 .incognito-mode a {
@@ -117,6 +157,12 @@ footer {
     color: #5f6368;
     text-align: center;
     padding: 10px 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode footer {
+    background-color: #1a1a1a;
+    color: #fff;
 }
 
 .footer-content {
@@ -130,12 +176,24 @@ footer {
     color: #202124;
     border: 1px solid #dadce0;
     border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+body.dark-mode .language select {
+    background-color: #2e2e2e;
+    color: #fff;
+    border-color: #5f6368;
 }
 
 .links a {
     color: #5f6368;
     text-decoration: none;
     margin: 0 10px;
+    transition: color 0.3s;
+}
+
+body.dark-mode .links a {
+    color: #fff;
 }
 
 /* Style du bouton Retour */
@@ -152,4 +210,23 @@ footer {
 
 #back-btn:hover {
     text-decoration: underline;
+}
+
+/* Style du bouton de basculement de thème */
+.theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: #4285f4;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+    background-color: #357ae8;
 }
