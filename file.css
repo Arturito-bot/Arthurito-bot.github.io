@@ -42,7 +42,8 @@ p {
     text-align: left;
 }
 
-input[type="email"] {
+input[type="email"], 
+input[type="password"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -51,12 +52,14 @@ input[type="email"] {
     color: #fff;
 }
 
-.forgot-email {
+.forgot-email, 
+.forgot-password {
     text-align: left;
     margin-bottom: 15px;
 }
 
-.forgot-email a {
+.forgot-email a, 
+.forgot-password a {
     color: #1a73e8;
     text-decoration: none;
 }
@@ -99,6 +102,7 @@ button:hover {
     text-decoration: none;
 }
 
+/* Footer */
 footer {
     position: fixed;
     bottom: 0;
@@ -126,4 +130,20 @@ footer {
     color: #fff;
     text-decoration: none;
     margin: 0 10px;
+}
+
+/* Style du bouton Retour */
+#back-btn {
+    background: none;
+    border: none;
+    color: #1a73e8;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+    display: block;
+    margin-bottom: 15px;
+}
+
+#back-btn:hover {
+    text-decoration: underline;
 }
