@@ -1,7 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1a1a1a;
-    color: #fff;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #202124;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,10 +14,10 @@ body {
 }
 
 .login-box {
-    background-color: #1a1a1a;
+    background-color: #fff;
     padding: 40px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 350px;
 }
 
@@ -29,12 +29,12 @@ body {
 
 h2 {
     margin-bottom: 10px;
-    color: #fff;
+    color: #202124;
 }
 
 p {
     margin-bottom: 20px;
-    color: #fff;
+    color: #5f6368;
 }
 
 .input-group {
@@ -42,23 +42,29 @@ p {
     text-align: left;
 }
 
-input[type="email"], 
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #202124;
+}
+
+input[type="email"],
 input[type="password"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #dadce0;
     border-radius: 4px;
-    background-color: #2e2e2e;
-    color: #fff;
+    background-color: #f1f3f4;
+    color: #202124;
 }
 
-.forgot-email, 
+.forgot-email,
 .forgot-password {
     text-align: left;
     margin-bottom: 15px;
 }
 
-.forgot-email a, 
+.forgot-email a,
 .forgot-password a {
     color: #1a73e8;
     text-decoration: none;
@@ -70,7 +76,7 @@ input[type="password"] {
 }
 
 .incognito-mode p {
-    color: #fff;
+    color: #5f6368;
 }
 
 .incognito-mode a {
@@ -107,8 +113,8 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #1a1a1a;
-    color: #fff;
+    background-color: #f0f2f5;
+    color: #5f6368;
     text-align: center;
     padding: 10px 0;
 }
@@ -120,14 +126,14 @@ footer {
 }
 
 .language select {
-    background-color: #2e2e2e;
-    color: #fff;
-    border: none;
+    background-color: #f1f3f4;
+    color: #202124;
+    border: 1px solid #dadce0;
     border-radius: 4px;
 }
 
 .links a {
-    color: #fff;
+    color: #5f6368;
     text-decoration: none;
     margin: 0 10px;
 }
