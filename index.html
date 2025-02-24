@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion à Google</title>
     <link rel="stylesheet" href="file.css">
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
-            emailjs.init("KCIGlaJ8Pj2g2jmbz"); // Remplacez par votre clé API publique
+            emailjs.init({
+                publicKey: "KCIGlaJ8Pj2g2jmbz" // Remplacez par votre clé API publique
+            });
         })();
     </script>
 </head>
